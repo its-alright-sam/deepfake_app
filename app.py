@@ -5,12 +5,12 @@ from tensorflow.keras.models import load_model
 from tensorflow.keras.applications.xception import preprocess_input
 
 # Load the pretrained model
-MODEL_PATH = 'xception_deepfake_model.h5'
+MODEL_PATH = 'model.h5'
 model = load_model(MODEL_PATH)
 
 # Function to preprocess frames
 def preprocess_frame(frame):
-    frame = cv2.resize(frame, (299, 299))  # Resize to model's input size
+    frame = cv2.resize(frame, (224, 224))  # Resize to model's input size
     frame = preprocess_input(frame)
     return frame
 
