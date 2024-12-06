@@ -5,7 +5,7 @@ from tensorflow.keras.models import load_model
 from tensorflow.keras.applications.xception import preprocess_input
 
 # Load the pretrained model
-MODEL_PATH = 'model.h5'
+MODEL_PATH = 'D:\github project stuff\model.h5'
 model = load_model(MODEL_PATH)
 
 # Function to preprocess frames
